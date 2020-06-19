@@ -5,7 +5,7 @@ using Microsoft.Azure.Cosmos.Table;
 
 namespace RvdB.Common.Azure.Storage
 {
-    public class TableStorageRepository
+    public class TableStorageRepository : ITableStorageRepository
     {
         #region Fields
 
