@@ -3,12 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackageId>RvdB.Common</PackageId>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <Authors>Rick van den Bosch</Authors>
     <Company>Rick van den Bosch</Company>
     <Copyright>Copyright © 2020 Rick van den Bosch</Copyright>
-    <RepositoryUrl></RepositoryUrl>
     <Description>Package with (parts of) my own generic toolbox that I use in multiple projects.</Description>
+    <RepositoryUrl>https://github.com/rickvdbosch/rvdb-common</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
