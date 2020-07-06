@@ -21,9 +21,6 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v1.3
-      with:
-        projectKey: rickvdbosch_rvdb-common
-        organization: rickvdbosch
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 # Disable tests for now, need to add in the future, with Azurite for the BlobStorage
