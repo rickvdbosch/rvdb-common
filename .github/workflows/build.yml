@@ -19,6 +19,8 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@v1.3
 # Disable tests for now, need to add in the future, with Azurite for the BlobStorage
 #    - name: Test
 #      run: dotnet test --no-restore --verbosity normal
