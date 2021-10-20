@@ -6,13 +6,13 @@
     <Version>1.2.2</Version>
     <Authors>Rick van den Bosch</Authors>
     <Company>Rick van den Bosch</Company>
-    <Copyright>Copyright © 2020 Rick van den Bosch</Copyright>
+    <Copyright>Copyright © 2020 - 2021 Rick van den Bosch</Copyright>
     <Description>Package with (parts of) my own Azure toolbox that I use in multiple projects.</Description>
     <RepositoryUrl>https://github.com/rickvdbosch/rvdb-common</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.8.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
     <PackageReference Include="Microsoft.Azure.Cosmos.Table" Version="1.0.8" />
   </ItemGroup>
 

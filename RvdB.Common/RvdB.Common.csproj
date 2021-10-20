@@ -6,7 +6,7 @@
     <Version>1.2.0</Version>
     <Authors>Rick van den Bosch</Authors>
     <Company>Rick van den Bosch</Company>
-    <Copyright>Copyright © 2020 Rick van den Bosch</Copyright>
+    <Copyright>Copyright © 2020 - 2021 Rick van den Bosch</Copyright>
     <Description>Package with (parts of) my own generic toolbox that I use in multiple projects.</Description>
     <RepositoryUrl>https://github.com/rickvdbosch/rvdb-common</RepositoryUrl>
   </PropertyGroup>
