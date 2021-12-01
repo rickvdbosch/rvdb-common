@@ -13,7 +13,7 @@ namespace RvdB.Common.Azure.Storage
     {
         #region Fields
 
-        private BlobContainerClient _blobContainerClient;
+        private readonly BlobContainerClient _blobContainerClient;
 
         #endregion
 
