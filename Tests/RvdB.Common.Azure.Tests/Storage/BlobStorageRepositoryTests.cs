@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
 
-using Xunit;
-
 using RvdB.Common.Azure.Storage;
+
+using Xunit;
 
 namespace RvdB.Common.Azure.Tests
 {
