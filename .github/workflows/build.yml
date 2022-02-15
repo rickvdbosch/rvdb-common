@@ -1,4 +1,4 @@
-name: .NET Core
+name: Build it
 
 on:
   push:
@@ -14,14 +14,17 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.101
+        dotnet-version: 6.x
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore
-# Disable tests for now, need to add in the future, with Azurite for the BlobStorage
-#    - name: Test
-#      run: dotnet test --no-restore --verbosity normal
+      run: dotnet build --configuration Release --no-restore   
+    - name: Install azurite
+      run: npm install -g azurite
+    - name: Run Azurite
+      run: azurite --location ./.azurite/ &
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal
     - name: Pack
       run: dotnet pack --configuration Release --no-restore
     - name: Push
