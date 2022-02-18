@@ -19,7 +19,7 @@ namespace RvdB.Common.Azure.Tests
         public async Task GetBlobsInContainerAsync_ShouldReturnBlobs()
         {
             var blobStorageRepository = new BlobStorageRepository(CONNECTIONSTRING, CONTAINERNAME);
-            var blobs = await blobStorageRepository.GetBlobsInContainerAsync();
+            var blobs = await blobStorageRepository.GetBlobNamesInContainerAsync();
 
             Assert.NotNull(blobs);
             Assert.NotEmpty(blobs);
