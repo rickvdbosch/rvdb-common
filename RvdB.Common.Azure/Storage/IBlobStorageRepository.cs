@@ -23,6 +23,12 @@ namespace RvdB.Common.Azure.Storage
         /// Lists all blobs in a BlobContainer
         /// </summary>
         /// <returns>A <see cref="List{string}"/> containing all blobnames in a BlobContainer</returns>
-        Task<IEnumerable<string>> GetBlobsInContainerAsync();
+        Task<IEnumerable<string>> GetBlobNamesInContainerAsync();
+
+        /// <summary>
+        /// Lists all blobs in a BlobContainer, returning their full URLs
+        /// </summary>
+        /// <returns>A <see cref="List{string}"/> containing all blob URLs in a BlobContainer</returns>
+        Task<IEnumerable<string>> GetBlobUrlsInContainerAsync();
     }
 }

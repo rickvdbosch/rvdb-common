@@ -26,7 +26,7 @@ namespace RvdB.Common.Azure.Storage
 
         #endregion
 
-        public async Task<IEnumerable<string>> GetBlobsInContainerAsync()
+        public async Task<IEnumerable<string>> GetBlobNamesInContainerAsync()
         {
             string continuationToken = null;
             var files = new List<BlobItem>();
@@ -44,6 +44,26 @@ namespace RvdB.Common.Azure.Storage
             } while (!string.IsNullOrEmpty(continuationToken));
 
             return files.Select(f => f.Name);
+        }
+
+        public async Task<IEnumerable<string>> GetBlobUrlsInContainerAsync()
+        {
+            string continuationToken = null;
+            var files = new List<BlobItem>();
+
+            do
+            {
+                var resultSegment = _blobContainerClient.GetBlobsAsync().AsPages(continuationToken);
+
+                await foreach (Page<BlobItem> blobPage in resultSegment)
+                {
+                    files.AddRange(blobPage.Values);
+                    continuationToken = blobPage.ContinuationToken;
+                }
+
+            } while (!string.IsNullOrEmpty(continuationToken));
+
+            return files.Select(f => $"{_blobContainerClient.Uri}/{f.Name}");
         }
 
         public async Task DeleteBlobFromContainerAsync(string name)
