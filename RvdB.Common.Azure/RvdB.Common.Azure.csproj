@@ -3,12 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackageId>RvdB.Common.Azure</PackageId>
-    <Version>2.0.1</Version>
+    <Version>2.0.2</Version>
     <Authors>Rick van den Bosch</Authors>
     <Company>Rick van den Bosch</Company>
     <Copyright>Copyright © 2020 - 2022 Rick van den Bosch</Copyright>
     <Description>Package with (parts of) my own Azure toolbox that I use in multiple projects.</Description>
     <RepositoryUrl>https://github.com/rickvdbosch/rvdb-common</RepositoryUrl>
+    <PackageReleaseNotes>Added readme, including examples</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
