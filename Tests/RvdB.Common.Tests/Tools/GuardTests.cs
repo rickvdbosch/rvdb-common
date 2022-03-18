@@ -9,7 +9,7 @@ namespace RvdB.Common.Tests.Tools
         #region Fields
 
         private static readonly object _nullValue = null;
-        private static readonly object _nonNullValue = new object();
+        private static readonly object _nonNullValue = new();
 
         #endregion
 
