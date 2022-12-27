@@ -3,19 +3,26 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackageId>RvdB.Common.Azure</PackageId>
-    <Version>2.0.2</Version>
+    <Version>3.0.0</Version>
     <Authors>Rick van den Bosch</Authors>
     <Company>Rick van den Bosch</Company>
     <Copyright>Copyright © 2020 - 2022 Rick van den Bosch</Copyright>
     <Description>Package with (parts of) my own Azure toolbox that I use in multiple projects.</Description>
-    <RepositoryUrl>https://github.com/rickvdbosch/rvdb-common</RepositoryUrl>
-    <PackageReleaseNotes>Added readme, including examples</PackageReleaseNotes>
+    <PackageReleaseNotes>Huge refactor (now usable with DI). Added readme, included examples.</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/rickvdbosch/rvdb-common</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rickvdbosch/rvdb-common</RepositoryUrl>
+    <PackageTags>RvdB;rickvdbosch;azure;helper;storage;blobstorage;tablestorage</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.11.0" />
-    <PackageReference Include="Microsoft.Azure.Cosmos.Table" Version="1.0.8" />
+    <PackageReference Include="Azure.Data.Tables" Version="12.5.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.12.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RvdB.Common\RvdB.Common.csproj" />
   </ItemGroup>
 
 </Project>
